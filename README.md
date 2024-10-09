@@ -2,7 +2,7 @@
 
 Основная концепция: предназначенное для студентов ИРНИТУ веб-приложение для записи на публичные и (преимущественно) внутривузовские мероприятия.
 
-Язык программирования: PHP
+Языки программирования: PHP, Python
 
 Планируемые функции: наличие обновляемого списка мероприятий и публичных списков участников для каждого мероприятия, чатов, встроенного календаря, системы оповещений с использованием электронной почты. Список может дополниться в процессе разработки.
 
@@ -14,7 +14,7 @@ The web application being created is a training project aimed at practical learn
 
 Main concept: a web application for IRNITU students to sign up for public and (mostly) university-wide events.
 
-Programming language: PHP
+Programming languages: PHP, Python
 
 Planned features: an updated list of events and public lists of participants for each event, chats, built-in calendar, notification system via e-mail. The list can be expanded during the development process.
 
