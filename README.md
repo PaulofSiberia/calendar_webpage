@@ -1,4 +1,5 @@
 Используемые среды: OSPanel
+
 Языки программирования: PHP, Python
 
 Создаваемое веб-приложение является тренировочным проектом, направленным на практическое изучение программирования и проджект-менеджмента.
@@ -11,6 +12,7 @@
 
   ==ENG==
 Environments used: OSPanel
+
 Programming languages: PHP, Python
 
 The web application being created is a training project aimed at practical learning of programming and project management.
