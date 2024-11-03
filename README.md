@@ -1,25 +1,25 @@
-Используемые среды: OSPanel
+Используемые среды: Phoenix Code, PyCharm
 
-Языки программирования: PHP, Python
+Языки: HTML, CSS, Python
 
-Создаваемое веб-приложение является тренировочным проектом, направленным на практическое изучение программирования и проджект-менеджмента.
+Создаваемая веб-страница является тренировочным проектом, направленным на практическое изучение проджект-менеджмента и основ веб-программирования.
 
-Основная концепция: предназначенное для студентов ИРНИТУ веб-приложение для записи на публичные и (преимущественно) внутривузовские мероприятия.
+Основная концепция: предназначенный для студентов ИРНИТУ вебсайт, отображающий актуальные внутривузовские мероприятия.
 
-Планируемые функции: наличие обновляемого списка мероприятий (парсинг календаря мероприятий на https://www.istu.edu/) и публичных списков участников для каждого мероприятия, чатов, собственного встроенного календаря, системы оповещений с использованием электронной почты. Список может дополниться в процессе разработки.
+Планируемые функции: список мероприятий на день (парсинг календаря мероприятий на https://www.istu.edu/), отображение даты и времени.
 
-Практическая значимость: заключается в упрощении процесса организации личного времени и совмещении учебы с публичной деятельностью.
+Практическая значимость: заключается в распространении информации об институтских мероприятиях, которые могут заинтересовать студентов.
 
   ==ENG==
 
-Environments used: OSPanel
+Environments used: Phoenix Code, PyCharm
 
-Programming languages: PHP, Python
+Languages: HTML, CSS, Python
 
-The web application being created is a training project aimed at practical learning of programming and project management.
+The web page being created is a training project aimed at practical learning of project management and web programming basics.
 
-Main concept: a web application for IRNITU students to sign up for public and (mostly) university-wide events.
+Main concept: a website for IRNITU students, displaying current university events.
 
-Planned features: an updated list of events (by parsing the calendar of events at https://www.istu.edu/) and public lists of participants for each event, chats, built-in calendar, notification system via e-mail. The list can be expanded during the development process.
+Planned functions: list of events for the day (parsing the calendar of events at https://www.istu.edu/), display of date and time.
 
-Practical significance: is to simplify the process of organizing personal time and combining study with public activities.
+Practical significance: is to spread information about institute events that may be of interest to students.
