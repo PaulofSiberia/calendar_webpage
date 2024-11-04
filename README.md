@@ -1,6 +1,6 @@
-Используемые среды: Phoenix Code, PyCharm
+Используемые среды: Phoenix Code, PyCharm.
 
-Языки: HTML, CSS, Python
+Языки: HTML, CSS, Python.
 
 Создаваемая веб-страница является тренировочным проектом, направленным на практическое изучение проджект-менеджмента и основ веб-программирования.
 
@@ -12,9 +12,9 @@
 
   ==ENG==
 
-Environments used: Phoenix Code, PyCharm
+Environments used: Phoenix Code, PyCharm.
 
-Languages: HTML, CSS, Python
+Languages: HTML, CSS, Python.
 
 The web page being created is a training project aimed at practical learning of project management and web programming basics.
 
