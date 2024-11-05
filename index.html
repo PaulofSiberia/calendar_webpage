@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Tahoma;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            color: #ffffff;
+            background-color: #0012a4;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        #datetime {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        #dynamic-list {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #3444c3;
+        }
+        #dynamic-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #dynamic-list ul li {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header><h1>Календарь студента ИрНИТУ</h1></header>
+
+    <div id="datetime">
+        Дата и время (placeholder)
+    </div>
+
+    <div id="dynamic-list">
+        <ul>
+            <li>00:00 - Мероприятие (placeholder)</li>
+            <li>00:00 - Мероприятие (placeholder)</li>
+            <li>00:00 - Мероприятие (placeholder)</li>
+        </ul>
+    </div>
+
+</body>
+</html>
