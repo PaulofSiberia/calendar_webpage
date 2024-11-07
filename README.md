@@ -2,6 +2,8 @@
 
 Языки: HTML, CSS, Python.
 
+Фреймворк: Flask
+
 Создаваемая веб-страница является тренировочным проектом, направленным на практическое изучение проджект-менеджмента и основ веб-программирования.
 
 Основная концепция: предназначенный для студентов ИРНИТУ вебсайт, отображающий актуальные внутривузовские мероприятия.
@@ -15,6 +17,8 @@
 Environments used: Phoenix Code, PyCharm.
 
 Languages: HTML, CSS, Python.
+
+Framework: Flask
 
 The web page being created is a training project aimed at practical learning of project management and web programming basics.
 
