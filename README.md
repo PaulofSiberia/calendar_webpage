@@ -1,8 +1,8 @@
 Используемые среды: Phoenix Code, PyCharm.
 
-Языки: HTML, CSS, Python.
+Языки: HTML, Python.
 
-Фреймворк: Flask
+Фреймворк: Flask (+Jinja)
 
 Создаваемая веб-страница является тренировочным проектом, направленным на практическое изучение проджект-менеджмента и основ веб-программирования.
 
@@ -16,9 +16,9 @@
 
 Environments used: Phoenix Code, PyCharm.
 
-Languages: HTML, CSS, Python.
+Languages: HTML, Python.
 
-Framework: Flask
+Framework: Flask (+Jinja)
 
 The web page being created is a training project aimed at practical learning of project management and web programming basics.
 
