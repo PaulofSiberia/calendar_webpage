@@ -59,6 +59,27 @@
             <li>00:00 - Мероприятие (placeholder)</li>
         </ul>
     </div>
+    
+  <script>
+        function updateDateTime() {
+            const monthNames = [
+                "января", "февраля", "марта", "апреля", "мая", "июня",
+                "июля", "августа", "сентября", "октября", "ноября", "декабря"
+            ];
 
+            const now = new Date();
+            const utc8Time = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+            const day = utc8Time.getUTCDate();
+            const month = monthNames[utc8Time.getUTCMonth()];
+            const hours = String(utc8Time.getUTCHours()).padStart(2, '0');
+            const minutes = String(utc8Time.getUTCMinutes()).padStart(2, '0');
+
+            document.getElementById('datetime').textContent = `${day} ${month}, ${hours}:${minutes}`;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update every minute
+    </script>
+    
 </body>
 </html>
