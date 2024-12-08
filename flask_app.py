@@ -5,32 +5,29 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # Список названий месяцев в родительном падеже
+    
     months = [
         "января", "февраля", "марта", "апреля", "мая", "июня",
         "июля", "августа", "сентября", "октября", "ноября", "декабря"
     ]
 
-    # Рассчитаем текущее время UTC+8
+    
     utc_now = datetime.utcnow()
     utc_plus_8 = utc_now + timedelta(hours=8)
 
-    # Получим текущий день, месяц и время
     day = utc_plus_8.day
-    month = months[utc_plus_8.month - 1]  # Название месяца (индекс с 0)
+    month = months[utc_plus_8.month - 1] 
     time = utc_plus_8.strftime("%H:%M")
 
-    # Сформатируем дату
     formatted_date = f"{day} {month}, {time}"
 
-    # Пример списка мероприятий
+    # events placeholder
     events = [
         {"time": "09:00", "event": "Мероприятие 1"},
         {"time": "11:00", "event": "Мероприятие 2"},
         {"time": "15:00", "event": "Мероприятие 3"},
     ]
 
-    # Встроенный HTML и CSS
     html_template = """
     <!DOCTYPE html>
     <html lang="ru">
