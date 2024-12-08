@@ -2,7 +2,7 @@
 
 Языки: HTML, Python.
 
-Фреймворк: Flask (+Jinja)
+Фреймворк: Flask
 
 Создаваемая веб-страница является тренировочным проектом, направленным на практическое изучение проджект-менеджмента и основ веб-программирования.
 
@@ -18,7 +18,7 @@ Environments used: Phoenix Code, PyCharm.
 
 Languages: HTML, Python.
 
-Framework: Flask (+Jinja)
+Framework: Flask
 
 The web page being created is a training project aimed at practical learning of project management and web programming basics.
 
