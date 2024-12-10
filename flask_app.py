@@ -5,6 +5,7 @@ import re
 app = Flask(__name__)
 
 events = []
+PASSWORD = "CHANGED_FOR_GITHUB"  #замена пароля
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -25,13 +26,17 @@ def home():
     if request.method == "POST":
         event_time = request.form.get("event_time")
         event_name = request.form.get("event_name")
+        input_password = request.form.get("password")
         
-        if event_time and event_name:
-            events.append({"time": event_time, "event": event_name})
-            return redirect(url_for('home'))
+        if input_password == PASSWORD:
+            if event_time and event_name and re.match(r'^\d{2}:\d{2}$', event_time):
+                events.append({"time": event_time, "event": event_name})
+                return redirect(url_for('home'))
+            else:
+                error_message = "Неверный формат времени!"
         else:
-            error_message = "Неверный формат времени. Пожалуйста, используйте формат hh:mm."
-            
+            error_message = "Неверный пароль!"
+
     html_template = """
     <!DOCTYPE html>
     <html lang="ru">
@@ -81,7 +86,7 @@ def home():
                 text-align: center;
                 margin: 20px 0;
             }
-            input[type="text"] {
+            input[type="time"], input[type="text"], input[type="password"] {
                 padding: 5px;
                 margin: 5px;
             }
@@ -112,20 +117,21 @@ def home():
             </ul>
         </div>
 
-         {% if error_message %}
+        {% if error_message %}
         <div class="error">{{ error_message }}</div>
         {% endif %}
 
         <form method="POST">
-            <input type="text" name="event_time" placeholder="Время (например, 16:00)" required>
+            <input type="time" name="event_time" required>
             <input type="text" name="event_name" placeholder="Название мероприятия" required>
+            <input type="password" name="password" placeholder="Пароль" required>
             <input type="submit" value="Добавить мероприятие">
         </form>
 
     </body>
     </html>
     """
-    return render_template_string(html_template, datetime=formatted_date, events=events)
+    return render_template_string(html_template, datetime=formatted_date, events=events, error_message=locals().get('error_message', ''))
 
 if __name__ == "__main__":
     app.run(debug=True)
