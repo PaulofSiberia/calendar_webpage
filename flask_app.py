@@ -1,32 +1,32 @@
-from flask import Flask, render_template_string
+from flask import Flask, render_template_string, request, redirect, url_for
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-@app.route("/")
+events = []
+
+@app.route("/", methods=["GET", "POST"])
 def home():
-    
     months = [
         "января", "февраля", "марта", "апреля", "мая", "июня",
         "июля", "августа", "сентября", "октября", "ноября", "декабря"
     ]
 
-    
     utc_now = datetime.utcnow()
     utc_plus_8 = utc_now + timedelta(hours=8)
 
     day = utc_plus_8.day
-    month = months[utc_plus_8.month - 1] 
+    month = months[utc_plus_8.month - 1]
     time = utc_plus_8.strftime("%H:%M")
 
     formatted_date = f"{day} {month}, {time}"
 
-    # events placeholder
-    events = [
-        {"time": "09:00", "event": "Мероприятие 1"},
-        {"time": "11:00", "event": "Мероприятие 2"},
-        {"time": "15:00", "event": "Мероприятие 3"},
-    ]
+    if request.method == "POST":
+        event_time = request.form.get("event_time")
+        event_name = request.form.get("event_name")
+        if event_time and event_name:
+            events.append({"time": event_time, "event": event_name})
+            return redirect(url_for('home'))
 
     html_template = """
     <!DOCTYPE html>
@@ -73,6 +73,17 @@ def home():
                 background-color: #ffffff;
                 border-radius: 5px;
             }
+            form {
+                text-align: center;
+                margin: 20px 0;
+            }
+            input[type="text"] {
+                padding: 5px;
+                margin: 5px;
+            }
+            input[type="submit"] {
+                padding: 5px 10px;
+            }
         </style>
     </head>
     <body>
@@ -92,6 +103,12 @@ def home():
                 {% endfor %}
             </ul>
         </div>
+
+        <form method="POST">
+            <input type="text" name="event_time" placeholder="Время (например, 16:00)" required>
+            <input type="text" name="event_name" placeholder="Название мероприятия" required>
+            <input type="submit" value="Добавить мероприятие">
+        </form>
 
     </body>
     </html>
