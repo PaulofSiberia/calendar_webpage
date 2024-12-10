@@ -1,5 +1,6 @@
 from flask import Flask, render_template_string, request, redirect, url_for
 from datetime import datetime, timedelta
+import re
 
 app = Flask(__name__)
 
@@ -24,10 +25,13 @@ def home():
     if request.method == "POST":
         event_time = request.form.get("event_time")
         event_name = request.form.get("event_name")
+        
         if event_time and event_name:
             events.append({"time": event_time, "event": event_name})
             return redirect(url_for('home'))
-
+        else:
+            error_message = "Неверный формат времени. Пожалуйста, используйте формат hh:mm."
+            
     html_template = """
     <!DOCTYPE html>
     <html lang="ru">
@@ -84,6 +88,10 @@ def home():
             input[type="submit"] {
                 padding: 5px 10px;
             }
+            .error {
+                color: red;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -103,6 +111,10 @@ def home():
                 {% endfor %}
             </ul>
         </div>
+
+         {% if error_message %}
+        <div class="error">{{ error_message }}</div>
+        {% endif %}
 
         <form method="POST">
             <input type="text" name="event_time" placeholder="Время (например, 16:00)" required>
